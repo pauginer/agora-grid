@@ -1,0 +1,88 @@
+//-------------------------------------------------------
+// GRID SETTINGS
+//-------------------------------------------------------
+
+// this is the fixed gutter between columns
+@grid-gutter: 3em;
+
+// this sets your class names
+@grid-wrap-class: mw-ui-grid;
+@grid-col-class: mw-ui-item; 
+
+//-------------------------------------------------------
+// GRID MIXINS
+//-------------------------------------------------------
+.set-gutter(@gutter) {
+  margin-left: -@gutter;
+  .@{grid-col-class} {
+    padding-left: @gutter;
+  }
+}
+
+.grid-config() {
+
+  .@{grid-wrap-class} {    
+    margin-left: -@grid-gutter; // the same as your gutter
+    overflow: hidden;
+    clear: both; }
+     
+  .@{grid-col-class} {
+    float: left;
+    padding-left: @grid-gutter; // the gutter between columns
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .large-gutter {
+    .set-gutter(@grid-gutter*2); }
+
+  .half-gutter {
+    .set-gutter(@grid-gutter/2); }
+
+  .no-gutter {
+    .set-gutter(0); }
+
+  .reset-gutter {
+    .set-gutter(@grid-gutter); }
+
+  // reset for list grids
+  ul.@{grid-wrap-class},
+  ol.@{grid-wrap-class} {
+    padding-left: 0;
+    list-style: none;}
+
+  li.@{grid-col-class} {
+    margin-left: 0;
+    margin-bottom: 0; }
+
+}
+
+// set the proportions you want to use
+// $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
+.grid-setup(@namespace) {
+
+  .@{namespace}-one-whole,
+  .@{namespace}-set-one-whole .@{grid-col-class} {
+    width: 100%; }
+  
+  .@{namespace}-one-half,
+  .@{namespace}-set-one-half .@{grid-col-class} {
+    width: 50%; }
+    
+  .@{namespace}-one-third,
+  .@{namespace}-set-one-third .@{grid-col-class} {
+    width: 33.333%; }
+  .@{namespace}-two-thirds {
+    width: 66.666%; }
+
+
+  .@{namespace}-one-quarter,
+  .@{namespace}-set-one-quarter .@{grid-col-class} {
+    width: 25%; }
+  .@{namespace}-two-quarters,
+  .@{namespace}-set-two-quarters .@{grid-col-class} {  width: 50%; }
+  .@{namespace}-three-quarters {
+    width: 75%; }
+
+}
