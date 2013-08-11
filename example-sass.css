@@ -2,16 +2,90 @@
 .example .mw-ui-palm-set-one-whole .mw-ui-item {
   width: 100%; }
 .example .mw-ui-palm-one-half, .example .mw-ui-palm-two-quarters,
-.example .mw-ui-palm-set-two-quarters .mw-ui-item,
+.example .mw-ui-palm-set-two-quarters .mw-ui-item, .example .mw-ui-palm-three-sixths,
+.example .mw-ui-palm-set-three-sixths .mw-ui-item, .example .mw-ui-palm-four-eighths,
+.example .mw-ui-palm-set-four-eighths .mw-ui-item, .example .mw-ui-palm-five-tenths,
+.example .mw-ui-palm-set-five-tenths .mw-ui-item, .example .mw-ui-palm-six-twelfths,
+.example .mw-ui-palm-set-six-twelfths .mw-ui-item,
 .example .mw-ui-palm-set-one-half .mw-ui-item {
   width: 50%; }
-.example .mw-ui-palm-one-third,
+.example .mw-ui-palm-one-third, .example .mw-ui-palm-two-sixths,
+.example .mw-ui-palm-set-two-sixths .mw-ui-item, .example .mw-ui-palm-four-twelfths,
+.example .mw-ui-palm-set-four-twelfths .mw-ui-item,
 .example .mw-ui-palm-set-one-third .mw-ui-item {
   width: 33.333%; }
-.example .mw-ui-palm-two-thirds {
+.example .mw-ui-palm-two-thirds, .example .mw-ui-palm-four-sixths,
+.example .mw-ui-palm-set-four-sixths .mw-ui-item, .example .mw-ui-palm-eight-twelfths,
+.example .mw-ui-palm-set-eight-twelfths .mw-ui-item,
+.example .mw-ui-palm-set-two-thirds .mw-ui-item {
   width: 66.666%; }
-.example .mw-ui-palm-one-quarter,
+.example .mw-ui-palm-one-quarter, .example .mw-ui-palm-two-eighths,
+.example .mw-ui-palm-set-two-eighths .mw-ui-item, .example .mw-ui-palm-three-twelfths,
+.example .mw-ui-palm-set-three-twelfths .mw-ui-item,
 .example .mw-ui-palm-set-one-quarter .mw-ui-item {
   width: 25%; }
-.example .mw-ui-palm-three-quarters {
+.example .mw-ui-palm-three-quarters, .example .mw-ui-palm-six-eighths,
+.example .mw-ui-palm-set-six-eighths .mw-ui-item, .example .mw-ui-palm-nine-twelfths,
+.example .mw-ui-palm-set-nine-twelfths .mw-ui-item,
+.example .mw-ui-palm-set-three-quarters .mw-ui-item {
   width: 75%; }
+.example .mw-ui-palm-one-fifth, .example .mw-ui-palm-two-tenths,
+.example .mw-ui-palm-set-two-tenths .mw-ui-item,
+.example .mw-ui-palm-set-one-fifth .mw-ui-item {
+  width: 20%; }
+.example .mw-ui-palm-two-fifths, .example .mw-ui-palm-four-tenths,
+.example .mw-ui-palm-set-four-tenths .mw-ui-item,
+.example .mw-ui-palm-set-two-fifths .mw-ui-item {
+  width: 40%; }
+.example .mw-ui-palm-three-fifths, .example .mw-ui-palm-six-tenths,
+.example .mw-ui-palm-set-six-tenths .mw-ui-item,
+.example .mw-ui-palm-set-three-fifths .mw-ui-item {
+  width: 60%; }
+.example .mw-ui-palm-four-fifths, .example .mw-ui-palm-eight-tenths,
+.example .mw-ui-palm-set-eight-tenths .mw-ui-item,
+.example .mw-ui-palm-set-four-fifths .mw-ui-item {
+  width: 80%; }
+.example .mw-ui-palm-one-sixth, .example .mw-ui-palm-two-twelfths,
+.example .mw-ui-palm-set-two-twelfths .mw-ui-item,
+.example .mw-ui-palm-set-one-sixth .mw-ui-item {
+  width: 16.666%; }
+.example .mw-ui-palm-five-sixths, .example .mw-ui-palm-ten-twelfths,
+.example .mw-ui-palm-set-ten-twelfths .mw-ui-item,
+.example .mw-ui-palm-set-five-sixths .mw-ui-item {
+  width: 83.333%; }
+.example .mw-ui-palm-one-eighth,
+.example .mw-ui-palm-set-one-eighth .mw-ui-item {
+  width: 12.5%; }
+.example .mw-ui-palm-three-eighths,
+.example .mw-ui-palm-set-three-eighths .mw-ui-item {
+  width: 37.5%; }
+.example .mw-ui-palm-five-eighths,
+.example .mw-ui-palm-set-five-eighths .mw-ui-item {
+  width: 62.5%; }
+.example .mw-ui-palm-seven-eighths,
+.example .mw-ui-palm-set-seven-eighths .mw-ui-item {
+  width: 87.5%; }
+.example .mw-ui-palm-one-tenth,
+.example .mw-ui-palm-set-one-tenhth .mw-ui-item {
+  width: 10%; }
+.example .mw-ui-palm-three-tenths,
+.example .mw-ui-palm-set-three-tenths .mw-ui-item {
+  width: 30%; }
+.example .mw-ui-palm-seven-tenths,
+.example .mw-ui-palm-set-seven-tenths .mw-ui-item {
+  width: 70%; }
+.example .mw-ui-palm-nine-tenths,
+.example .mw-ui-palm-set-nine-tenths .mw-ui-item {
+  width: 90%; }
+.example .mw-ui-palm-one-twelfth,
+.example .mw-ui-palm-set-one-twelfth .mw-ui-item {
+  width: 8.333%; }
+.example .mw-ui-palm-five-twelfths,
+.example .mw-ui-palm-set-five-twelfths .mw-ui-item {
+  width: 41.666%; }
+.example .mw-ui-palm-seven-twelfths,
+.example .mw-ui-palm-set-seven-twelfths .mw-ui-item {
+  width: 58.333%; }
+.example .mw-ui-palm-eleven-twelfths,
+.example .mw-ui-palm-set-eleven-twelfths .mw-ui-item {
+  width: 91.666%; }
