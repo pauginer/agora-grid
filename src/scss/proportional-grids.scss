@@ -64,28 +64,151 @@ $grid-col-class: "mw-ui-item";
 // $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
 @mixin grid-setup($namespace) {
 
+  // Whole
   .#{$namespace}-one-whole,
   .#{$namespace}-set-one-whole .#{$grid-col-class} {
     width: 100%; }
-    
+
+  // Halfs    
   .#{$namespace}-one-half,
   .#{$namespace}-set-one-half .#{$grid-col-class} {
     width: 50%; }
     
+  // Thirds
   .#{$namespace}-one-third,
   .#{$namespace}-set-one-third .#{$grid-col-class} {
     width: 33.333%; }
-  .#{$namespace}-two-thirds {
+  .#{$namespace}-two-thirds,
+  .#{$namespace}-set-two-thirds .#{$grid-col-class} {
     width: 66.666%; }
 
-    
+  //Quarters
   .#{$namespace}-one-quarter,
   .#{$namespace}-set-one-quarter .#{$grid-col-class} {
     width: 25%; }
    .#{$namespace}-two-quarters,
   .#{$namespace}-set-two-quarters .#{$grid-col-class} { @extend .#{$namespace}-one-half }
-  .#{$namespace}-three-quarters {
+  .#{$namespace}-three-quarters,
+  .#{$namespace}-set-three-quarters .#{$grid-col-class} {
     width: 75%; }
+
+  //Fifths
+  .#{$namespace}-one-fifth,
+  .#{$namespace}-set-one-fifth .#{$grid-col-class} {
+    width: 20%; }
+  .#{$namespace}-two-fifths,
+  .#{$namespace}-set-two-fifths .#{$grid-col-class} {
+    width: 40%; }
+  .#{$namespace}-three-fifths,
+  .#{$namespace}-set-three-fifths .#{$grid-col-class} {
+    width: 60%; }
+  .#{$namespace}-four-fifths,
+  .#{$namespace}-set-four-fifths .#{$grid-col-class} {
+    width: 80%; }
+    
+  //Sixths
+  .#{$namespace}-one-sixth,
+  .#{$namespace}-set-one-sixth .#{$grid-col-class} {
+    width: 16.666%; }
+  .#{$namespace}-two-sixths,
+  .#{$namespace}-set-two-sixths .#{$grid-col-class} {
+    @extend .#{$namespace}-one-third;  }
+  .#{$namespace}-three-sixths,
+  .#{$namespace}-set-three-sixths .#{$grid-col-class} {
+    @extend .#{$namespace}-one-half; }
+  .#{$namespace}-four-sixths,
+  .#{$namespace}-set-four-sixths .#{$grid-col-class} {
+    @extend .#{$namespace}-two-thirds; }
+  .#{$namespace}-five-sixths,
+  .#{$namespace}-set-five-sixths .#{$grid-col-class} {
+    width: 83.333%; }
+
+   //Eighths
+  .#{$namespace}-one-eighth,
+  .#{$namespace}-set-one-eighth .#{$grid-col-class} {
+    width: 12.5%; }
+  .#{$namespace}-two-eighths,
+  .#{$namespace}-set-two-eighths .#{$grid-col-class} {
+     @extend .#{$namespace}-one-quarter; }
+  .#{$namespace}-three-eighths,
+  .#{$namespace}-set-three-eighths .#{$grid-col-class} {
+     width: 37.5%; }
+  .#{$namespace}-four-eighths,
+  .#{$namespace}-set-four-eighths .#{$grid-col-class} {
+    @extend .#{$namespace}-one-half; }
+  .#{$namespace}-five-eighths,
+  .#{$namespace}-set-five-eighths .#{$grid-col-class} {
+    width: 62.5%; }
+  .#{$namespace}-six-eighths,
+  .#{$namespace}-set-six-eighths .#{$grid-col-class} {
+    @extend .#{$namespace}-three-quarters; }
+  .#{$namespace}-seven-eighths,
+  .#{$namespace}-set-seven-eighths .#{$grid-col-class} {
+    width: 87.5%; }
+
+   //Tenths
+  .#{$namespace}-one-tenth,
+  .#{$namespace}-set-one-tenhth .#{$grid-col-class} {
+    width: 10%; }
+  .#{$namespace}-two-tenths,
+  .#{$namespace}-set-two-tenths .#{$grid-col-class} {
+     @extend .#{$namespace}-one-fifth; }
+  .#{$namespace}-three-tenths,
+  .#{$namespace}-set-three-tenths .#{$grid-col-class} {
+     width: 30%; }
+  .#{$namespace}-four-tenths,
+  .#{$namespace}-set-four-tenths .#{$grid-col-class} {
+    @extend .#{$namespace}-two-fifths; }
+  .#{$namespace}-five-tenths,
+  .#{$namespace}-set-five-tenths .#{$grid-col-class} {
+    @extend .#{$namespace}-one-half; }
+  .#{$namespace}-six-tenths,
+  .#{$namespace}-set-six-tenths .#{$grid-col-class} {
+    @extend .#{$namespace}-three-fifths; }
+  .#{$namespace}-seven-tenths,
+  .#{$namespace}-set-seven-tenths .#{$grid-col-class} {
+    width: 70%; }
+  .#{$namespace}-eight-tenths,
+  .#{$namespace}-set-eight-tenths .#{$grid-col-class} {
+    @extend .#{$namespace}-four-fifths; }
+  .#{$namespace}-nine-tenths,
+  .#{$namespace}-set-nine-tenths .#{$grid-col-class} {
+    width: 90%; }
+
+   //Twelfths
+  .#{$namespace}-one-twelfth,
+  .#{$namespace}-set-one-twelfth .#{$grid-col-class} {
+    width: 8.333%; }
+  .#{$namespace}-two-twelfths,
+  .#{$namespace}-set-two-twelfths .#{$grid-col-class} {
+     @extend .#{$namespace}-one-sixth; }
+  .#{$namespace}-three-twelfths,
+  .#{$namespace}-set-three-twelfths .#{$grid-col-class} {
+     @extend .#{$namespace}-one-quarter; }
+  .#{$namespace}-four-twelfths,
+  .#{$namespace}-set-four-twelfths .#{$grid-col-class} {
+    @extend .#{$namespace}-one-third; }
+  .#{$namespace}-five-twelfths,
+  .#{$namespace}-set-five-twelfths .#{$grid-col-class} {
+    width: 41.666%; }
+  .#{$namespace}-six-twelfths,
+  .#{$namespace}-set-six-twelfths .#{$grid-col-class} {
+    @extend .#{$namespace}-one-half; }
+  .#{$namespace}-seven-twelfths,
+  .#{$namespace}-set-seven-twelfths .#{$grid-col-class} {
+    width: 58.333%; }
+  .#{$namespace}-eight-twelfths,
+  .#{$namespace}-set-eight-twelfths .#{$grid-col-class} {
+    @extend .#{$namespace}-two-thirds; }
+  .#{$namespace}-nine-twelfths,
+  .#{$namespace}-set-nine-twelfths .#{$grid-col-class} {
+    @extend .#{$namespace}-three-quarters;  }
+  .#{$namespace}-ten-twelfths,
+  .#{$namespace}-set-ten-twelfths .#{$grid-col-class} {
+    @extend .#{$namespace}-five-sixths;  }
+  .#{$namespace}-eleven-twelfths,
+  .#{$namespace}-set-eleven-twelfths .#{$grid-col-class} {
+    width: 91.666%; }
 
 }
 
