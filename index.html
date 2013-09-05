@@ -28,14 +28,14 @@
 				width: 90%;
 				margin: 2em auto;
 			}
-			.picture{
-			background: transparent url(puzzle.png) top center no-repeat;		
-			background-image: -webkit-linear-gradient(transparent, transparent), url(puzzle.svg);
-			background-image: linear-gradient(transparent, transparent), url(puzzle.svg);
-			background-size: contain;
-			width: 100%;
-			min-height:100px;
-		}
+			.picture {
+				background: transparent url(puzzle.png) top center no-repeat;
+				background-image: -webkit-linear-gradient(transparent, transparent), url(puzzle.svg);
+				background-image: linear-gradient(transparent, transparent), url(puzzle.svg);
+				background-size: contain;
+				width: 100%;
+				min-height: 100px;
+			}
 		</style>
 	</head>
 	<body>
@@ -46,10 +46,10 @@
 				A proportional and responsive grid system. You can use it to indicate which percentage of the screen
 				each element should use for different screen sizes. It is nestable, and allows semantic classes.
 			</p>
-		<div class="mw-ui-grid">
+			<div class="mw-ui-grid">
 				<div class="mw-ui-item mw-ui-one-half mw-ui-palm-one-whole">
 					<h3>Basic concepts</h3>
-										<p>
+					<p>
 						The grid system is based in two main elements identified by the following classes:
 						<ul>
 							<li>mw-ui-<b>grid</b>: The grid container. Layout properties work only for elements contained in a grid.</li>
@@ -66,15 +66,15 @@
 					<h3>History</h3>
 					<p>
 						The grid is based on the <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/"> concepts defined by CSS Wizardry</a> 
-						in <a href="https://github.com/csswizardry/csswizardry-grids">this grid system</a>.				
+						in <a href="https://github.com/csswizardry/csswizardry-grids">this grid system</a>.
 						The former grid system uses <em>inline-block</em> elements which requires to <a href="https://github.com/csswizardry/inuit.css/issues/170">avoid spaces between blocks</a>.
 						Agora grid uses (some of) the same concepts but relies on floating elements instead. 
-						A proportional <a href="http://builtbyboon.com/blog/proportional-grids">a proportional grid system built by Boon</a> has been extended to spport the concepts above, 
+						<a href="http://builtbyboon.com/blog/proportional-grids">A proportional grid system built by Boon</a> has been extended to spport the concepts above,
 						and made available in both Sass and Less.
 					</p>
 					
 				</div>
-		</div>	
+		</div>
 
 
 			<h2>Proportionally responsive</h2>
@@ -175,7 +175,7 @@
 			
 			<h2>Semantic clases</h2>
 			<p>
-				The grid is available in both less and sass. So you can create your own classes byextending the existing ones.
+				The grid is available in both less and sass. So you can create your own classes by extending the existing ones.
 			</p>
 		</div>
 	</body>
