@@ -30,7 +30,7 @@
     .#{$namespace}-three-quarters {
       width: 74.95%; }
   }
-  
+
 }*/
 /* -- Use this wrapper if you want to divide your columns -- */
 .divide-bottom {
@@ -38,7 +38,7 @@
   padding-bottom: 1.5em;
   margin-bottom: 1.5em;
 }
-/* -- Use this wrapper if you want to block-out a column with padding 
+/* -- Use this wrapper if you want to block-out a column with padding
 Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 .island {
   padding: 1.5em;
@@ -49,38 +49,44 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 }
 /* -- Setup grids with base class -- */
 .mw-ui-grid {
-  margin-left: -3em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
   overflow: hidden;
   clear: both;
 }
 .mw-ui-item {
   float: left;
-  padding-left: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .large-gutter {
-  margin-left: -3em*2;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 }
 .large-gutter .mw-ui-item {
   padding-left: 3em*2;
 }
 .half-gutter {
-  margin-left: -3em/2;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 }
 .half-gutter .mw-ui-item {
   padding-left: 3em/2;
 }
 .no-gutter {
-  margin-left: -0;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 }
 .no-gutter .mw-ui-item {
   padding-left: 0;
 }
 .reset-gutter {
-  margin-left: -3em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 }
 .reset-gutter .mw-ui-item {
   padding-left: 3em;

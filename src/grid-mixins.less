@@ -6,7 +6,8 @@
 // GRID MIXINS
 //-------------------------------------------------------
 .set-gutter(@gutter) {
-  margin-left: -@gutter;
+  margin-left: (-@grid-gutter / 2);
+  margin-right: (-@grid-gutter / 2);
   .@{grid-col-class} {
     padding-left: @gutter;
   }
@@ -15,13 +16,15 @@
 .grid-config() {
 
   .@{grid-wrap-class} {
-    margin-left: -@grid-gutter; // the same as your gutter
+    margin-left: (-@grid-gutter / 2);
+    margin-right: (-@grid-gutter / 2);
     overflow: hidden;
     clear: both; }
 
   .@{grid-col-class} {
     float: left;
-    padding-left: @grid-gutter; // the gutter between columns
+    padding-left: (@grid-gutter / 2);
+    padding-right: (@grid-gutter / 2);
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
