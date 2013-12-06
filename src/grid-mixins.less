@@ -55,13 +55,13 @@
 
 }
 
-.proportion-rule(@medium, @proportion, @size) when not (@medium = all) {
+.proportion-rule(@medium, @proportion, @size) when not (@medium = ~'') {
   .@{medium}-@{proportion},
   .@{medium}-set-@{proportion} .@{grid-col-class} {
     width: @size; }
 }
 
-.proportion-rule(@medium, @proportion, @size) when (@medium = all){
+.proportion-rule(@medium, @proportion, @size) when (@medium = ~''){
   .@{proportion},
   .set-@{proportion} .@{grid-col-class} {
     width: @size; }
@@ -195,12 +195,12 @@
 // include grids-init to set up your grids with your base class
 // i.e. @include grids-init("col");
 
-.grids-init(@class: all) when not (@old-ie){
+.grids-init(@class: ~'') when not (@old-ie){
   .grid-config;
   .grid-setup(~'', @class);
 }
 
-.grids-init(@class: all) when (@old-ie){
+.grids-init(@class: ~'') when (@old-ie){
   .grid-config;
   .grid-setup(~'', @class);
   .grid-config-oldie;
