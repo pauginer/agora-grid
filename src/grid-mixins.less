@@ -68,8 +68,8 @@
 }
 
 // set the proportions you want to use
-.grid-setup(@class, @prefix:~'') {
-   @namespace: ~'@{prefix}@{class}';
+.grid-setup(@medium, @prefix:~'') {
+   @namespace: ~'@{prefix}@{medium}';
   //Whole
   .proportion-rule(@namespace, one-whole, 100%);
 
@@ -131,6 +131,10 @@
   .proportion-rule(@namespace, ten-twelfths, 83.333%);
   .proportion-rule(@namespace, eleven-twelfths, 91.666%);
 
+    //VISIBILITY:
+    //.@{prefix}hidden-@{class} {
+    //    display: none;
+    //}
 }
 
 // account for no border-box in IE7/6
@@ -189,12 +193,12 @@
 
 .grids-init(@class: all) when not (@old-ie){
   .grid-config;
-  .grid-setup(@class);
+  .grid-setup(~'', @class);
 }
 
 .grids-init(@class: all) when (@old-ie){
   .grid-config;
-  .grid-setup(@class);
+  .grid-setup(~'', @class);
   .grid-config-oldie;
   .grid-setup-oldie(@class);
 }
