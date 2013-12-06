@@ -6,11 +6,11 @@
 // GRID MIXINS
 //-------------------------------------------------------
 .set-gutter(@gutter) {
-  margin-left: auto; //(-@grid-gutter / 2);
-  margin-right: auto; //(-@grid-gutter / 2);
+  //margin-left: (-@gutter / 2);
+  //margin-right: (-@gutter / 2);
   .@{grid-col-class} {
-        padding-left: (@grid-gutter / 2);
-        padding-right: (@grid-gutter / 2);
+        padding-left: (@gutter / 2);
+        padding-right: (@gutter / 2);
   }
 }
 
@@ -20,7 +20,8 @@
     margin-left: auto;//(-@grid-gutter / 2);
     margin-right: auto;//(-@grid-gutter / 2);
     overflow: hidden;
-    clear: both; }
+    clear: both;
+    }
 
   .@{grid-col-class} {
     float: left;
@@ -29,7 +30,8 @@
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    }
 
   .large-gutter {
     .set-gutter(@grid-gutter*2); }
@@ -55,20 +57,23 @@
 
 }
 
+//Proportion rules: indicate the width of an element for a specific screen size.
 .proportion-rule(@medium, @proportion, @size) when not (@medium = ~'') {
   .@{medium}-@{proportion},
   .@{medium}-set-@{proportion} .@{grid-col-class} {
-    width: @size; }
+        width: @size;
+    }
 }
 
 .proportion-rule(@medium, @proportion, @size) when (@medium = ~''){
   .@{proportion},
   .set-@{proportion} .@{grid-col-class} {
-    width: @size; }
+        width: @size;
+    }
 }
 
+//Visibility rule: sets classes to show/hide an element according to screen sizes.
 .visibility-rule(@medium, @prefix) when not (@medium = ~''){
-
     .@{prefix}hidden-@{medium} {
         display: none !important;
     }

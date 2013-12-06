@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agora grid</title>
+    <link rel="stylesheet" href="../grid.css"/>
+    <style>
+    /* Some classes for the demo, not part of the grid*/
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .message-list {
+            background: #f0f0f0;
+            max-width:500px;
+        }
+        .message-list-item {
+            border-bottom: 1px solid  #dddddd;
+            padding: 15px initial;
+        }
+        .sender-image {
+            background: transparent url("http://placehold.it/50x50&text=:)") top center no-repeat;
+            min-height:45px;
+
+            background-size:contain;
+            padding: 0 !important;
+        }
+        .message-excerpt {
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .message {
+            background: #fbfbfb;
+        }
+
+        .active{
+            font-weight:bold;
+            position: relative;
+        }
+        .active:after {
+        content: "";
+        display:inline-block;
+        position:absolute;
+        border-right:20px solid #fbfbfb;
+        border-bottom: 20px solid transparent;
+        border-top: 20px solid transparent;
+        vertical-align:middle;
+        right:0;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="mw-ui-grid no-gutter">
+    <div class="message-list mw-ui-item reset-gutter mw-ui-one-third mw-ui-lap-one-quarter mw-ui-hidden-palm">
+            <div class="message-list-item mw-ui-item mw-ui-one-whole active">
+                <div class="sender-image  mw-ui-item mw-ui-one-quarter"></div>
+                <div class="message-excerpt  mw-ui-item mw-ui-three-quarters">Message1</div>
+            </div>
+            <div class="message-list-item mw-ui-item mw-ui-one-whole">
+                <div class="sender-image  mw-ui-item mw-ui-one-quarter"></div>
+                <div class="message-excerpt  mw-ui-item mw-ui-three-quarters ">Message2</div>
+            </div>
+            <div class="message-list-item mw-ui-item mw-ui-one-whole">
+                <div class="sender-image  mw-ui-item mw-ui-one-quarter"></div>
+                <div class="message-excerpt  mw-ui-item mw-ui-three-quarters ">Message3</div>
+            </div>
+
+    </div>
+    <div class="message mw-ui-item mw-ui-two-thirds mw-ui-lap-three-quarters wm-ui-palm-one-whole">
+        <div class="mw-ui-grid reset-gutter">
+
+            <h1 class="title mw-ui-item mw-ui-one-whole"> Message 1</h1>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
