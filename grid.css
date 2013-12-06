@@ -49,8 +49,8 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 }
 /* -- Setup grids with base class -- */
 .mw-ui-grid {
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   clear: both;
 }
@@ -64,32 +64,36 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
   box-sizing: border-box;
 }
 .large-gutter {
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .large-gutter .mw-ui-item {
-  padding-left: 3em*2;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 .half-gutter {
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .half-gutter .mw-ui-item {
-  padding-left: 3em/2;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 .no-gutter {
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .no-gutter .mw-ui-item {
-  padding-left: 0;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 .reset-gutter {
-  margin-left: -1.5em;
-  margin-right: -1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .reset-gutter .mw-ui-item {
-  padding-left: 3em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 ul.mw-ui-grid,
 ol.mw-ui-grid {

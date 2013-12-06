@@ -6,18 +6,19 @@
 // GRID MIXINS
 //-------------------------------------------------------
 .set-gutter(@gutter) {
-  margin-left: (-@grid-gutter / 2);
-  margin-right: (-@grid-gutter / 2);
+  margin-left: auto; //(-@grid-gutter / 2);
+  margin-right: auto; //(-@grid-gutter / 2);
   .@{grid-col-class} {
-    padding-left: @gutter;
+        padding-left: (@grid-gutter / 2);
+        padding-right: (@grid-gutter / 2);
   }
 }
 
 .grid-config() {
 
   .@{grid-wrap-class} {
-    margin-left: (-@grid-gutter / 2);
-    margin-right: (-@grid-gutter / 2);
+    margin-left: auto;//(-@grid-gutter / 2);
+    margin-right: auto;//(-@grid-gutter / 2);
     overflow: hidden;
     clear: both; }
 
