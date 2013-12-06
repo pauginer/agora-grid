@@ -449,6 +449,9 @@ li.mw-ui-item {
   .mw-ui-palm-set-eleven-twelfths .mw-ui-item {
     width: 91.666%;
   }
+  .mw-ui-hidden-palm {
+    display: none;
+  }
 }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   .mw-ui-lap-one-whole,
@@ -622,6 +625,9 @@ li.mw-ui-item {
   .mw-ui-lap-eleven-twelfths,
   .mw-ui-lap-set-eleven-twelfths .mw-ui-item {
     width: 91.666%;
+  }
+  .mw-ui-hidden-lap {
+    display: none;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -797,6 +803,9 @@ li.mw-ui-item {
   .mw-ui-portable-set-eleven-twelfths .mw-ui-item {
     width: 91.666%;
   }
+  .mw-ui-hidden-portable {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .mw-ui-desk-one-whole,
@@ -970,5 +979,8 @@ li.mw-ui-item {
   .mw-ui-desk-eleven-twelfths,
   .mw-ui-desk-set-eleven-twelfths .mw-ui-item {
     width: 91.666%;
+  }
+  .mw-ui-hidden-desk {
+    display: none;
   }
 }

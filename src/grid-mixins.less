@@ -67,6 +67,13 @@
     width: @size; }
 }
 
+.visibility-rule(@prefix, @medium) when not (@medium = ~''){
+    //Visibility support:
+    .@{prefix}hidden-@{medium} {
+        display: none;
+    }
+}
+
 // set the proportions you want to use
 .grid-setup(@medium, @prefix:~'') {
    @namespace: ~'@{prefix}@{medium}';
@@ -131,10 +138,7 @@
   .proportion-rule(@namespace, ten-twelfths, 83.333%);
   .proportion-rule(@namespace, eleven-twelfths, 91.666%);
 
-    //VISIBILITY:
-    //.@{prefix}hidden-@{class} {
-    //    display: none;
-    //}
+   .visibility-rule(@prefix,@medium);
 }
 
 // account for no border-box in IE7/6
