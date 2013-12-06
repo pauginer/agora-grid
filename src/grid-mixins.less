@@ -68,9 +68,8 @@
 }
 
 // set the proportions you want to use
-// $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
-.grid-setup(@namespace) {
-
+.grid-setup(@class, @prefix:~'') {
+   @namespace: ~'@{prefix}@{class}';
   //Whole
   .proportion-rule(@namespace, one-whole, 100%);
 
@@ -178,6 +177,7 @@
 
 }*/
 
+
 //-------------------------------------------------------
 // ADDED SUPPORT
 // Mixins to work with http://goo.gl/uwyT6
@@ -187,12 +187,12 @@
 // include grids-init to set up your grids with your base class
 // i.e. @include grids-init("col");
 
-.grids-init(@class) when not (@old-ie){
+.grids-init(@class: all) when not (@old-ie){
   .grid-config;
   .grid-setup(@class);
 }
 
-.grids-init(@class) when (@old-ie){
+.grids-init(@class: all) when (@old-ie){
   .grid-config;
   .grid-setup(@class);
   .grid-config-oldie;
