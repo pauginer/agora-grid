@@ -1,0 +1,208 @@
+//out://
+
+@import "grid-variables.less";
+
+//-------------------------------------------------------
+// GRID MIXINS
+//-------------------------------------------------------
+.set-gutter(@gutter) {
+  margin-left: -@gutter;
+  .@{grid-col-class} {
+    padding-left: @gutter;
+  }
+}
+
+.grid-config() {
+
+  .@{grid-wrap-class} {
+    margin-left: -@grid-gutter; // the same as your gutter
+    overflow: hidden;
+    clear: both; }
+
+  .@{grid-col-class} {
+    float: left;
+    padding-left: @grid-gutter; // the gutter between columns
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .large-gutter {
+    .set-gutter(@grid-gutter*2); }
+
+  .half-gutter {
+    .set-gutter(@grid-gutter/2); }
+
+  .no-gutter {
+    .set-gutter(0); }
+
+  .reset-gutter {
+    .set-gutter(@grid-gutter); }
+
+  // reset for list grids
+  ul.@{grid-wrap-class},
+  ol.@{grid-wrap-class} {
+    padding-left: 0;
+    list-style: none;}
+
+  li.@{grid-col-class} {
+    margin-left: 0;
+    margin-bottom: 0; }
+
+}
+
+.proportion-rule(@medium, @proportion, @size) when not (@medium = all) {
+  .@{medium}-@{proportion},
+  .@{medium}-set-@{proportion} .@{grid-col-class} {
+    width: @size; }
+}
+
+.proportion-rule(@medium, @proportion, @size) when (@medium = all){
+  .@{proportion},
+  .set-@{proportion} .@{grid-col-class} {
+    width: @size; }
+}
+
+// set the proportions you want to use
+// $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
+.grid-setup(@namespace) {
+
+  //Whole
+  .proportion-rule(@namespace, one-whole, 100%);
+
+  //Halfs
+  .proportion-rule(@namespace, one-half, 50%);
+
+  //Thirds
+  .proportion-rule(@namespace, one-third, 33.333%);
+  .proportion-rule(@namespace, two-thirds, 66.666%);
+
+  //Quarters
+  .proportion-rule(@namespace, one-quarter, 25%);
+  .proportion-rule(@namespace, two-quarters, 50%);
+  .proportion-rule(@namespace, three-quarters, 75%);
+
+  //Fifths
+  .proportion-rule(@namespace, one-fifth, 20%);
+  .proportion-rule(@namespace, two-fifths, 40%);
+  .proportion-rule(@namespace, three-fifths, 60%);
+  .proportion-rule(@namespace, four-fifths, 80%);
+
+   //Sixths
+  .proportion-rule(@namespace, one-sixth, 16.666%);
+  .proportion-rule(@namespace, two-sixths, 33.333%);
+  .proportion-rule(@namespace, three-sixths, 50%);
+  .proportion-rule(@namespace, four-sixths, 66.666%);
+  .proportion-rule(@namespace, five-sixths, 83.333%);
+
+  //Eighths
+  .proportion-rule(@namespace, one-eighth, 12.5%);
+  .proportion-rule(@namespace, two-eighths, 25%);
+  .proportion-rule(@namespace, three-eighths, 37.5%);
+  .proportion-rule(@namespace, four-eighths, 50%);
+  .proportion-rule(@namespace, five-eighths, 62.5%);
+  .proportion-rule(@namespace, six-eighths, 75%);
+  .proportion-rule(@namespace, seven-eighths, 87.5%);
+
+  //Tenths
+  .proportion-rule(@namespace, one-tenth, 10%);
+  .proportion-rule(@namespace, two-tenths, 20%);
+  .proportion-rule(@namespace, three-tenths, 30%);
+  .proportion-rule(@namespace, four-tenths, 40%);
+  .proportion-rule(@namespace, five-tenths, 50%);
+  .proportion-rule(@namespace, six-tenths, 60%);
+  .proportion-rule(@namespace, seven-tenths, 70%);
+  .proportion-rule(@namespace, eight-tenths, 80%);
+  .proportion-rule(@namespace, nine-tenths, 90%);
+
+  //Twelfths
+  .proportion-rule(@namespace, one-twelfth, 8.333%);
+  .proportion-rule(@namespace, two-twelfths, 16.666%);
+  .proportion-rule(@namespace, three-twelfths, 25%);
+  .proportion-rule(@namespace, four-twelfths, 33.333%);
+  .proportion-rule(@namespace, five-twelfths, 41.666%);
+  .proportion-rule(@namespace, six-twelfths, 50%);
+  .proportion-rule(@namespace, seven-twelfths, 58.333%);
+  .proportion-rule(@namespace, eight-twelfths, 66.666%);
+  .proportion-rule(@namespace, nine-twelfths, 75%);
+  .proportion-rule(@namespace, ten-twelfths, 83.333%);
+  .proportion-rule(@namespace, eleven-twelfths, 91.666%);
+
+}
+
+// account for no border-box in IE7/6
+.grid-config-oldie {
+
+  .lt-ie8 {
+    .@{grid-wrap-class} {
+      margin-left: 0; }
+
+    .@{grid-col-class} {
+      padding: 0;
+      margin-left: 5%;
+
+    &:first-child {
+      margin-left: 0; }
+    }
+
+  }
+
+}
+
+// amend widths slightly for IE7/6
+/*
+@mixin grid-setup-oldie($namespace) {
+
+  .lt-ie8 {
+    .#{$namespace}-full,
+    .#{$namespace}-set-full .#{$grid-col-class} {
+      width: 99.95%; }
+    .#{$namespace}-one-half,
+    .#{$namespace}-set-one-half .#{$grid-col-class} {
+      width: 47.45%; }
+    .#{$namespace}-one-third,
+    .#{$namespace}-set-one-third .#{$grid-col-class} {
+      width: 29.55%; }
+    .#{$namespace}-two-thirds {
+      width: 64.95%; }
+    .#{$namespace}-one-quarter,
+    .#{$namespace}-set-one-quarter .#{$grid-col-class} {
+      width: 19.95%; }
+    .#{$namespace}-three-quarters {
+      width: 74.95%; }
+  }
+
+}*/
+
+//-------------------------------------------------------
+// ADDED SUPPORT
+// Mixins to work with http://goo.gl/uwyT6
+//-------------------------------------------------------
+@old-ie: null !default;
+
+// include grids-init to set up your grids with your base class
+// i.e. @include grids-init("col");
+
+.grids-init(@class) when not (@old-ie){
+  .grid-config;
+  .grid-setup(@class);
+}
+
+.grids-init(@class) when (@old-ie){
+  .grid-config;
+  .grid-setup(@class);
+  .grid-config-oldie;
+  .grid-setup-oldie(@class);
+}
+
+// include grids-include with your class for each breakpoint
+// e.g. @include respond-min(30em) { @include grid-include("bp1-col"); }
+
+.grid-include(@class) when not (@old-ie){
+  .grid-setup(@class);
+}
+
+.grid-include(@class) when (@old-ie){
+  .grid-setup(@class);
+  .grid-setup-oldie(@class);
+}

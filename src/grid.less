@@ -1,13 +1,15 @@
-@import "proportional-grids.less";
+//out:../grid.css
+
+@import "grid-mixins.less";
 
 /* -- Use this wrapper if you want to divide your columns -- */
-  
+
 .divide-bottom {
   border-bottom: 1px solid #ccc;
   padding-bottom: 1.5em;
   margin-bottom: 1.5em; }
 
-/* -- Use this wrapper if you want to block-out a column with padding 
+/* -- Use this wrapper if you want to block-out a column with padding
 Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 
 .island {
@@ -16,35 +18,35 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 
   :last-child {
     margin-bottom: 0; }
-  
+
 }
 
 /* -- Setup grids with base class -- */
 
-    
-    
+
+
 .grids-init(mw-ui);
 
 @media only screen and (max-width: 480px) {
- 
+
   .grid-setup(mw-ui-palm);
-    
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
 
   .grid-setup(mw-ui-lap);
-    
+
 }
 
 @media only screen and (max-width: 1023px) {
 
   .grid-setup(mw-ui-portable);
-  
+
 }
 
 @media only screen and (max-width: 1024px) {
 
   .grid-setup(mw-ui-desk);
-    
+
 }
