@@ -21,30 +21,27 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 
 }
 
+.mw-ui-hidden {
+        display: none;
+    }
+
+
 /* -- Setup grids with base class -- */
 
 .grids-init(mw-ui);
 
 @media only screen and (max-width: 480px) {
-
-  .grid-setup(palm, mw-ui-);
-
+    .grid-setup(palm, mw-ui-);
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
-
-  .grid-setup(lap, mw-ui-);
-
+    .grid-setup(lap, mw-ui-);
 }
 
 @media only screen and (max-width: 1023px) {
-
-  .grid-setup(portable, mw-ui-);
-
+    .grid-setup(portable, mw-ui-);
 }
 
-@media only screen and (max-width: 1024px) {
-
-  .grid-setup(desk, mw-ui-);
-
+@media only screen and (min-width: 1024px) {
+    .grid-setup(desk, mw-ui-);
 }

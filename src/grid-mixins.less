@@ -67,12 +67,17 @@
     width: @size; }
 }
 
-.visibility-rule(@prefix, @medium) when not (@medium = ~''){
-    //Visibility support:
+.visibility-rule(@medium, @prefix) when not (@medium = ~''){
+
     .@{prefix}hidden-@{medium} {
-        display: none;
+        display: none !important;
     }
+    .@{prefix}visible-@{medium} {
+        display: block ;
+    }
+
 }
+
 
 // set the proportions you want to use
 .grid-setup(@medium, @prefix:~'') {
@@ -138,7 +143,7 @@
   .proportion-rule(@namespace, ten-twelfths, 83.333%);
   .proportion-rule(@namespace, eleven-twelfths, 91.666%);
 
-   .visibility-rule(@prefix,@medium);
+   .visibility-rule(@medium, @prefix);
 }
 
 // account for no border-box in IE7/6
@@ -198,6 +203,7 @@
 .grids-init(@class: ~'') when not (@old-ie){
   .grid-config;
   .grid-setup(~'', @class);
+
 }
 
 .grids-init(@class: ~'') when (@old-ie){

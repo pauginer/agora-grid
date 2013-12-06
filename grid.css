@@ -47,6 +47,9 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 .island :last-child {
   margin-bottom: 0;
 }
+.mw-ui-hidden {
+  display: none;
+}
 /* -- Setup grids with base class -- */
 .mw-ui-grid {
   margin-left: auto;
@@ -450,7 +453,10 @@ li.mw-ui-item {
     width: 91.666%;
   }
   .mw-ui-hidden-palm {
-    display: none;
+    display: none !important;
+  }
+  .mw-ui-visible-palm {
+    display: block ;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
@@ -627,7 +633,10 @@ li.mw-ui-item {
     width: 91.666%;
   }
   .mw-ui-hidden-lap {
-    display: none;
+    display: none !important;
+  }
+  .mw-ui-visible-lap {
+    display: block ;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -804,10 +813,13 @@ li.mw-ui-item {
     width: 91.666%;
   }
   .mw-ui-hidden-portable {
-    display: none;
+    display: none !important;
+  }
+  .mw-ui-visible-portable {
+    display: block ;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .mw-ui-desk-one-whole,
   .mw-ui-desk-set-one-whole .mw-ui-item {
     width: 100%;
@@ -981,6 +993,9 @@ li.mw-ui-item {
     width: 91.666%;
   }
   .mw-ui-hidden-desk {
-    display: none;
+    display: none !important;
+  }
+  .mw-ui-visible-desk {
+    display: block ;
   }
 }

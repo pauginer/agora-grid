@@ -186,9 +186,19 @@
         <p>Control the visibility of elements according to the screen size.</p>
         <div class="mw-ui-grid">
             <div class="mw-ui-item mw-ui-one-whole">
-                <span class="mw-ui-visible-desk"> You are on dektop</span> <span class="mw-ui-hidden-desk">Not on desktop</span>
+                <div class="mw-ui-visible-palm mw-ui-hidden"> <b>You are on a palm-sized device</b></div>
+                <div class="mw-ui-hidden-palm">Not on a palm-sized device</div>
             </div>
         </div>
+        <div class="mw-ui-item mw-ui-one-whole">
+            <div class="mw-ui-visible-lap mw-ui-hidden"> <b>You are on a lap-sized device</b></div>
+            <div class="mw-ui-hidden-lap">Not on a lap-sized device</div>
+        </div>
+        <div class="mw-ui-item mw-ui-one-whole">
+            <div class="mw-ui-visible-desk mw-ui-hidden"> <b>You are on a desk-size device</b></div>
+            <div class="mw-ui-hidden-desk">Not on a desk-size device</div>
+        </div>
+
 
 
 		</div>
