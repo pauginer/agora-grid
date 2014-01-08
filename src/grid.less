@@ -30,18 +30,18 @@ Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
 
 .grids-init(mw-ui);
 
-@media only screen and (max-width: 480px) {
+@media @palm {
     .grid-setup(palm, mw-ui-);
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
+@media @lap {
     .grid-setup(lap, mw-ui-);
 }
 
-@media only screen and (max-width: 1023px) {
+@media @portable {
     .grid-setup(portable, mw-ui-);
 }
 
-@media only screen and (min-width: 1024px) {
+@media @desk {
     .grid-setup(desk, mw-ui-);
 }
