@@ -1,4 +1,3 @@
-//out:demo.css
 @import "../src/grid.less";
 @grey: #222222;
 
@@ -36,4 +35,20 @@ h2 {
 		.mw-ui-one-whole;
 	}
 	background: #f0f0f0;
+
+}
+
+.suggestion-list {
+	.mw-ui-grid;
+}
+
+.suggestion {
+	.mw-ui-item;
+	background: white;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	margin: 2px 0;
+	@media @palm {
+		.mw-ui-one-half;
+	}
 }
