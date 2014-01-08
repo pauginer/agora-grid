@@ -1,0 +1,39 @@
+//out:demo.css
+@import "../src/grid.less";
+@grey: #222222;
+
+h2 {
+  color: @grey;
+}
+
+.content {
+	.mw-ui-grid;
+	color: @grey;
+}
+
+.source {
+	.mw-ui-item;
+	.mw-ui-one-third;
+	@media @palm {
+		.mw-ui-one-half;
+	}
+
+}
+
+.translation {
+	.mw-ui-item;
+	.mw-ui-one-third;
+	@media @palm {
+		.mw-ui-one-half;
+	}
+
+}
+
+.tools {
+	.mw-ui-item;
+	.mw-ui-one-third;
+	@media @palm {
+		.mw-ui-one-whole;
+	}
+	background: #f0f0f0;
+}
