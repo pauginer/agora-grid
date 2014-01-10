@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Agora grid</title>
+		<script src="jquery.js"></script>
+		<script src="handlebars.js"></script>
+		<link rel="stylesheet" href="../grid.css"/>
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+		<style>
+			.result {
+				min-height: 200px;
+			}
+		</style>
+		<script id="instructions-template" type="text/x-handlebars-template">
+			<ol>
+				<li>Set a variable in grid-variables.less a media query such as:
+	<code>@{{medium}}: ~"only screen and (min-width: 481px) and (max-width: 1023px)";</code></li>
+				<li>Add the content below to grid-responsive.less</li>
+			</ol>
+		</script>
+		<script id="style-template" type="text/x-handlebars-template">
+//{{medium}}
+.mw-ui-{{medium}}-one-whole,
+.mw-ui-{{medium}}-set-one-whole .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-whole;
+	}
+}
+
+.mw-ui-{{medium}}-one-half,
+.mw-ui-{{medium}}-set-one-half .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-half;
+	}
+ }
+
+.mw-ui-{{medium}}-one-third,
+.mw-ui-{{medium}}-set-one-third .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-third;
+	}
+  }
+
+.mw-ui-{{medium}}-two-thirds,
+.mw-ui-{{medium}}-set-two-thirds .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-thirds;
+	}
+  }
+
+.mw-ui-{{medium}}-one-quarter,
+.mw-ui-{{medium}}-set-one-quarter .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-quarter;
+	}
+  }
+
+.mw-ui-{{medium}}-two-quarters,
+.mw-ui-{{medium}}-set-two-quarters .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-quarters;
+	}
+}
+
+.mw-ui-{{medium}}-three-quarters,
+.mw-ui-{{medium}}-set-three-quarters .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-three-quarters;
+	}
+}
+
+.mw-ui-{{medium}}-one-fifth,
+.mw-ui-{{medium}}-set-one-fifth .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-fifth;
+	}
+}
+
+.mw-ui-{{medium}}-two-fifths,
+.mw-ui-{{medium}}-set-two-fifths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-fifths;
+	}
+  }
+
+.mw-ui-{{medium}}-three-fifths,
+.mw-ui-{{medium}}-set-three-fifths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-three-fifths;
+	}
+}
+
+.mw-ui-{{medium}}-four-fifths,
+.mw-ui-{{medium}}-set-four-fifths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-four-fifths;
+	}
+  }
+
+.mw-ui-{{medium}}-one-sixth,
+.mw-ui-{{medium}}-set-one-sixth .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-sixth;
+	}
+  }
+
+.mw-ui-{{medium}}-two-sixths,
+.mw-ui-{{medium}}-set-two-sixths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-sixths;
+	}
+}
+
+.mw-ui-{{medium}}-three-sixths,
+.mw-ui-{{medium}}-set-three-sixths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-three-sixths;
+	}
+}
+
+.mw-ui-{{medium}}-four-sixths,
+.mw-ui-{{medium}}-set-four-sixths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-four-sixths;
+	}
+}
+
+.mw-ui-{{medium}}-five-sixths,
+.mw-ui-{{medium}}-set-five-sixths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-five-sixths;
+	}
+  }
+
+.mw-ui-{{medium}}-one-eighth,
+.mw-ui-{{medium}}-set-one-eighth .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-eighth;
+	}
+}
+
+.mw-ui-{{medium}}-two-eighths,
+.mw-ui-{{medium}}-set-two-eighths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-eighths;
+	}
+}
+
+.mw-ui-{{medium}}-three-eighths,
+.mw-ui-{{medium}}-set-three-eighths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-three-eighths;
+	}
+}
+
+.mw-ui-{{medium}}-four-eighths,
+.mw-ui-{{medium}}-set-four-eighths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-four-eighths;
+	}
+}
+
+.mw-ui-{{medium}}-five-eighths,
+.mw-ui-{{medium}}-set-five-eighths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-five-eighths;
+	}
+ }
+
+.mw-ui-{{medium}}-six-eighths,
+.mw-ui-{{medium}}-set-six-eighths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-six-eighths;
+	}
+}
+
+.mw-ui-{{medium}}-seven-eighths,
+.mw-ui-{{medium}}-set-seven-eighths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-seven-eighths;
+	}
+  }
+
+.mw-ui-{{medium}}-one-tenth,
+.mw-ui-{{medium}}-set-one-tenth .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-tenth;
+	}
+}
+
+.mw-ui-{{medium}}-two-tenths,
+.mw-ui-{{medium}}-set-two-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-three-tenths,
+.mw-ui-{{medium}}-set-three-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-three-tenths;
+	}
+  }
+
+.mw-ui-{{medium}}-four-tenths,
+.mw-ui-{{medium}}-set-four-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-four-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-five-tenths,
+.mw-ui-{{medium}}-set-five-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-five-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-six-tenths,
+.mw-ui-{{medium}}-set-six-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-six-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-seven-tenths,
+.mw-ui-{{medium}}-set-seven-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-seven-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-eight-tenths,
+.mw-ui-{{medium}}-set-eight-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-eight-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-nine-tenths,
+.mw-ui-{{medium}}-set-nine-tenths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-nine-tenths;
+	}
+}
+
+.mw-ui-{{medium}}-one-twelfth,
+.mw-ui-{{medium}}-set-one-twelfth .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-one-twelfth;
+	}
+}
+
+.mw-ui-{{medium}}-two-twelfths,
+.mw-ui-{{medium}}-set-two-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-two-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-three-twelfths,
+.mw-ui-{{medium}}-set-three-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-three-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-four-twelfths,
+.mw-ui-{{medium}}-set-four-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-four-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-five-twelfths,
+.mw-ui-{{medium}}-set-five-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-five-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-six-twelfths,
+.mw-ui-{{medium}}-set-six-twelfths .mw-ui-item {
+    @media @{{medium}}{
+		.mw-ui-six-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-seven-twelfths,
+.mw-ui-{{medium}}-set-seven-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-seven-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-eight-twelfths,
+.mw-ui-{{medium}}-set-eight-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-eight-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-nine-twelfths,
+.mw-ui-{{medium}}-set-nine-twelfths .mw-ui-item {
+    @media @{{medium}}{
+		.mw-ui-nine-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-ten-twelfths,
+.mw-ui-{{medium}}-set-ten-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-ten-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-eleven-twelfths,
+.mw-ui-{{medium}}-set-eleven-twelfths .mw-ui-item {
+	@media @{{medium}}{
+		.mw-ui-eleven-twelfths;
+	}
+}
+
+.mw-ui-{{medium}}-hidden {
+	@media @{{medium}}{
+    	display: none !important;
+	}
+}
+
+.mw-ui-{{medium}}-visible {
+	@media @{{medium}}{
+    	display: block ;
+	}
+}
+		</script>
+	<script>
+
+	function generation(medium){
+		var html = template({medium:medium});
+		$(".result").text(html);
+		html=instructions_template({medium:medium});
+		$(".instructions").html(html);
+
+	};
+
+	var template;
+	var instructions_template;
+	$( document ).ready( function() {
+
+		template = Handlebars.compile($("#style-template").html());
+		instructions_template = Handlebars.compile($("#instructions-template").html());
+		var hash = window.location.hash;
+		var args=hash.replace('#','');
+		if(args !==""){
+			generation(args);
+		}
+
+		$(".medium").keyup(function(){
+			var medium = $(".medium").val();
+			generation(medium);
+		});
+	});
+	</script>
+	</head>
+	<body>
+		<div class="container mw-ui-grid">
+			<h1>Breakpoint generator</h1>
+			<input class="medium mw-ui-item mw-ui-one-half" type="text" placeholder="Name for the medium (watch, tv, wall...)">
+			<div>
+			<p class="instructions mw-ui-item mw-ui-one-whole"></p>
+			<textarea class="result mw-ui-item mw-ui-one-whole"></textarea>
+			</div>
+
+
+		</div>
+	</body>
+</html>
