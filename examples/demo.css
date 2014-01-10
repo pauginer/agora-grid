@@ -186,9 +186,6 @@
 .mw-ui-set-eleven-twelfths .mw-ui-item {
   width: 91.666%;
 }
-.mw-ui-hidden {
-  display: none;
-}
 @media only screen and (max-width: 480px) {
   .mw-ui-palm-one-whole,
   .mw-ui-palm-set-one-whole .mw-ui-item {
