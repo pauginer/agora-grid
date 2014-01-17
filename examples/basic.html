@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agora grid: basic example</title>
+	<link rel="stylesheet" href="../grid.css"/>
+    <style> /*just for the demo:*/
+		.container {
+			margin: 20px;
+			font-size: 18px;
+			font-family: sans-serif;
+		}
+		.mw-ui-item {
+			color: white;
+			border: 1px solid #fbfbfb;
+			background: #D44242;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="mw-ui-grid">
+	<div class="mw-ui-item mw-ui-one-half">Half</div>
+	<div class="mw-ui-item mw-ui-one-half">Half</div>
+
+	<div class="mw-ui-item mw-ui-one-third">Third</div>
+	<div class="mw-ui-item mw-ui-one-third">Third</div>
+	<div class="mw-ui-item mw-ui-one-third">Third</div>
+
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+
+	<div class="mw-ui-item mw-ui-one-fifth mw-ui-push-two-fifths">Fifth (pushed)</div>
+
+	<div class="mw-ui-item mw-ui-one-half">
+		Nesting the elements above in half the space:
+	<div class="mw-ui-grid">
+	<div class="mw-ui-item mw-ui-one-half">Half</div>
+	<div class="mw-ui-item mw-ui-one-half">Half</div>
+
+	<div class="mw-ui-item mw-ui-one-third">Third</div>
+	<div class="mw-ui-item mw-ui-one-third">Third</div>
+	<div class="mw-ui-item mw-ui-one-third">Third</div>
+
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+	<div class="mw-ui-item mw-ui-one-fifth">Fifth</div>
+
+	<div class="mw-ui-item mw-ui-one-fifth mw-ui-push-two-fifths">Fifth (pushed 2/5)</div>
+	</div>
+	</div>
+	<div class="mw-ui-item mw-ui-one-half">
+		Nesting a right-aligned item:
+	<div class="mw-ui-item mw-ui-one-sixth right">1/6 (right)</div>
+	</div>
+</div>
+</div>
+</body>
