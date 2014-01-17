@@ -24,7 +24,8 @@
 				<li>Add the content below to grid-responsive.less</li>
 			</ol>
 		</script>
-		<script id="style-template" type="text/x-handlebars-template">
+		<script id="style-template" type="text/x-handlebars-template">// main: grid.less
+//RESPONSIVE SUPPORT:
 {{#each medium}}
 //{{this}}
 .mw-ui-{{this}}-one-whole,
@@ -339,9 +340,7 @@
     	display: block ;
 	}
 }
-
-{{/each}}
-		</script>
+{{/each}}</script>
 	<script>
 
 	function generation(medium){
