@@ -4,237 +4,45 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Agora grid</title>
-		<link rel="stylesheet" href="grid.css"/>
+		<link rel="stylesheet" href="index-style.css"/>
 		<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
-		<style>
-		/* Some classes for the demo, not part of the grid*/
-			body {
-				font-family: 'Open Sans', sans-serif;
-			}
-			label {
-				color: #3366bb;
-				border-bottom: 1px solid #3366bb;
-				text-align: center;
-				width: 100%;
-				display: block;
-				font-size: 13px;
-			}
-			.example {
-				background: #fbfbfb;
-				border: 1px solid #ddd;
-			}
-			.container {
-				width: 90%;
-				margin: 2em auto;
-			}
-			.picture {
-				background: transparent url(puzzle.png) top center no-repeat;
-				background-image: -webkit-linear-gradient(transparent, transparent), url(puzzle.svg);
-				background-image: linear-gradient(transparent, transparent), url(puzzle.svg);
-				background-size: contain;
-				width: 100%;
-				min-height: 100px;
-			}
-
-            .mw-ui-grid {
-                background: #fafafa;
-            }
-            .mw-ui-item:hover {
-                background: #f2f2f2;
-            }
-			code {
-				white-space:pre;
-			}
-			h2 {
-				margin-top: 30px;
-				border-bottom: 1px solid #f0f0f0;
-			}
-		</style>
 	</head>
 	<body>
-		<div class="container">
-			<h1>Agora grid</h1>
-			<p>
-				A proportional and responsive grid system. You can use it to indicate which percentage of the screen
-				each element should use for different screen sizes. It is nestable, and allows semantic classes.
-			</p>
-			<div class="mw-ui-grid">
-				<div class="mw-ui-item mw-ui-one-half mw-ui-palm-one-whole">
-					<h3>Basic concepts</h3>
-					<p>
-						The grid system is based in two main elements identified by the following classes:
-						<ul>
-							<li>mw-ui-<b>grid</b>: The grid container. Layout properties work only for elements contained in a grid.</li>
-							<li>mw-ui-<b>item</b>: Elements inside a grid. Additional classes are normally addeed to customize
-								the layout of the element.</li>
-						</ul>
-					</p>
-					
-					<p>Layout instructions are provided by classes with the following synthax:
-					<em>mw-ui[-medium][-set]-[proportion]</em>. More details below.</p>
+	<div class="container">
+			<h1 class="title">Agora Grid</h1>
+			<p class="lead">Write less to support all screens </p>
+			<section class="benefit">
+				<h2>Proportional</h2>
+				<p>Indicates which percentage of the available screen should occupy each element using classes such as <code>.mw-ui-one-half</code> or <code>mw-ui-two-thirds</code>.</p>
+				<!-- <a href="exampes/proportional.html">More</a> -->
+			</section>
+			<section class="benefit">
+				<h2>Responsive</h2>
+				<p>For each screen you want to support, you can indicate how elements will adapt. An initial set of breakpoints are defined (<code>@palm</code>, <code>@lap</code>,<code>@portable</code>, and <code>@desk</code>) but you can define as many screen sizes as you need.</p>
+				<!--<a href="exampes/responsive.html">More</a> -->
+			</section>
+			<section class="benefit">
+				<h2>Semantic</h2>
+				<p>It's based on LESS to keep the HTML free from grid classes, and allowing you to adjust any property beyond layout when being responsive.</p>
+				<!-- <a href="exampes/semantic.html">More</a> -->
+			</section>
 
-				</div>
-				<div class="mw-ui-item mw-ui-one-half mw-ui-palm-one-whole">
-					<h3>History</h3>
-					<p>
-						The grid is based on the <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/"> concepts defined by CSS Wizardry</a> 
-						in <a href="https://github.com/csswizardry/csswizardry-grids">this grid system</a>.
-						The former grid system uses <em>inline-block</em> elements which requires to <a href="https://github.com/csswizardry/inuit.css/issues/170">avoid spaces between blocks</a>.
-						Agora grid uses (some of) the same concepts but relies on floating elements instead. 
-						<a href="http://builtbyboon.com/blog/proportional-grids">A proportional grid system built by Boon</a> that uses floating elements has been has been used as inspiration.
-					</p>
-					
-				</div>
-		</div>
-
-
-			<h2>Proportionally responsive</h2>
-			<p>
-				The mediums availabe define breaking points in a no-device specific way:
-			</p>
-			<ul>
-				<li>
-					mw-ui-<b>palm</b> for small screens that fit your hand.
-				</li>
-				<li>
-					mw-ui-<b>lap</b> for medium screens.
-				</li>
-				<li>
-					mw-ui-<b>portable</b> for both of the above.
-				</li>
-				<li>
-					mw-ui-<b>desk</b> for bigger screens.
-				</li>
-				<li>
-					<b>(default)</b>
-				</li>
-			</ul>
-			<p>
-				The proportions allow to work with columns in different fractions such as one-half, three-quarters or eleven-twelfths.
-			</p>
-
-			<div class="mw-ui-grid">
-				<div class="mw-ui-item mw-ui-one-sixth mw-ui-palm-one-whole">
-					<label>1 → 1/6 (default)</label>
-				</div>
-				<div class="mw-ui-item mw-ui-one-half mw-ui-lap-four-sixths">
-					<label>4/6 (lap) → 1/2 (default)</label>
-				</div>
-				<div class="mw-ui-item mw-ui-one-third mw-ui-palm-one-half mw-ui-lap-one-sixth">
-					<label>1/2 (palm) → 1/6 (lap) → 1/3 (default)</label>
-				</div>
-			</div>
-			<div class="mw-ui-grid">
-				<div class="mw-ui-item mw-ui-one-sixth mw-ui-palm-one-whole">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item mw-ui-one-half mw-ui-lap-four-sixths">
-					<p>
-						<b>The invisible gradient technique</b>
-					</p>
-					<p>
-						Support SVG graphics with reliable PNG fallback for old browsers.
-					</p>
-				</div>
-				<div class="mw-ui-item mw-ui-one-third mw-ui-palm-one-half mw-ui-lap-one-sixth">
-					<p>
-						<a href="http://pauginer.github.io/invisible-gradient-technique/">View demo</a>
-					</p>
-					<p>
-						<a href="http://pauginer.github.io/invisible-gradient-technique/">Get code</a>
-					</p>
-				</div>
-			</div>
-			<h3>Regular containers</h3>
-			<p>
-				When all elements in a container have the same widths, you can indicate so at the grid element
-				avoiding to repeat the definition at each element. The synthax for doing so is similar to the one used for items but uses the -set prefix.
-			</p>
-			<p>
-				In the exampe below, the mw-ui-<b>grid</b> element includes the class <em>mw-ui-palm<b>-set-</b>one-half</em>. This makes all mw-ui-<b>item</b>s
-				to use half of the space when displayed on a mobile device:
-			</p>
-			<div class="mw-ui-grid mw-ui-set-one-quarter mw-ui-palm-set-one-half">
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-				<div class="mw-ui-item">
-					<div class="picture"></div>
-				</div>
-			</div>
-
-			<h2>Nestable</h2>
-			Grids can be defined inside other grids.
-			
-			<h2>Semantic clases</h2>
-			<p>
-				The grid is available in Less. So you can create your own classes by extending the existing ones. This allows you to avoid Grid classes to populate the HTML. For example, you can style the tools section in the following way:
-			</p>
-		<div class="mw-ui-grid mw-ui-set-one-half mw-ui-palm-set-one-whole">
-				<div class="mw-ui-item"> Using predefined grid classes for different screen sizes:
-				<code>
-.tools {
-	.mw-ui-item;
-	.mw-ui-one-third;
-	.mw-ui-palm-one-whole;
-	background: #f0f0f0;
-}
-				</code>
-				</div>
-				<div class="mw-ui-item"> Using the media query variables:
-
-					<code>
-.tools {
-	.mw-ui-item;
-	.mw-ui-one-third;
-	@media @palm {
-		.mw-ui-one-whole;
-		//other Mobile-specific properties...
+<div class="example">
+<p>For example, if you want some sections to occupy &#x2153; by default, but to expand to the whole width on a mobile device, you need the following LESS code:</p>
+<code class="block">section {
+    .mw-ui-item;
+    .mw-ui-one-third;
+    @media @palm {
+        .mw-ui-one-whole;
+        font-size: 2.2em;
 	}
-	background: #f0f0f0;
-}
-					</code>
-				</div>
-		</div>
-		<p><a href="examples/simple-demo.html">An example using Less is available</a>.</p>
-		<p>to add new predefined mediums, you can use <a href="generator/index.html">the breakpoint generator</a>.</p>
-        <h2>Visibility control</h2>
-        <p>Control the visibility of elements according to the screen size. Use classes such as <code>mw-ui-palm-hidden</code> or <code>mw-desk-visible</code> to control visibility on different screen sizes.</p>
-        <div class="mw-ui-grid">
-            <div class="mw-ui-item mw-ui-one-whole">
-                <div class="mw-ui-palm-visible mw-ui-hidden"> <b>You are on a palm-sized device</b></div>
-                <div class="mw-ui-palm-hidden">Not on a palm-sized device</div>
-            </div>
-        </div>
-        <div class="mw-ui-item mw-ui-one-whole">
-            <div class="mw-ui-lap-visible mw-ui-hidden"> <b>You are on a lap-sized device</b></div>
-            <div class="mw-ui-lap-hidden">Not on a lap-sized device</div>
-        </div>
-        <div class="mw-ui-item mw-ui-one-whole">
-            <div class="mw-ui-desk-visible mw-ui-hidden"> <b>You are on a desk-size device</b></div>
-            <div class="mw-ui-desk-hidden">Not on a desk-size device</div>
-        </div>
+}</code>
+</div>
 
+<div class="extensions">
+Extensions of the grid system allow it to add explicit media proportions or use the flexbox model.
+</div>
 
-
-		</div>
+</div>
 	</body>
 </html>
