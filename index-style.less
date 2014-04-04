@@ -33,24 +33,24 @@ h1 {
 }
 
 section {
-	.mw-ui-item;
 	.mw-ui-one-third;
-
 	@media @lap {
 		.mw-ui-one-half;
 		font-size: 1.4em;
+		&:last-of-type {
+			.mw-ui-one-whole;
+		}
 	}
 
 	@media @palm {
 		.mw-ui-one-whole;
 		font-size: 2.2em;
+		.mw-ui-gutter(0);
 	}
-
 }
 
 .example {
 	.mw-ui-grid;
-	.mw-ui-item;
 	.mw-ui-one-whole;
 	background: #fcfcfc;
 	border: 1px solid #ddd;
@@ -59,14 +59,12 @@ section {
 	border-radius: 3px;
 	padding: 10px;
 	p {
-		.mw-ui-item;
 		.mw-ui-two-thirds;
 		@media @portable {
 			.mw-ui-one-whole;
 		}
 	}
 	code {
-		.mw-ui-item;
 		.mw-ui-one-third;
 		@media @portable {
 			.mw-ui-one-whole;
@@ -74,7 +72,7 @@ section {
 	}
 }
 
-.extensions {
+.more {
 	.mw-ui-item;
 }
 

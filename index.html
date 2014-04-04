@@ -13,24 +13,23 @@
 			<p class="lead">Write less to support all screens </p>
 			<section class="benefit">
 				<h2>Proportional</h2>
-				<p>Indicates which percentage of the available screen should occupy each element using classes such as <code>.mw-ui-one-half</code> or <code>mw-ui-two-thirds</code>.</p>
+				<p>Indicate which percentage of the available screen should occupy each element using LESS mixins such as <code>.mw-ui-one-half</code> or <code>mw-ui-two-thirds</code>.</p>
 				<!-- <a href="exampes/proportional.html">More</a> -->
 			</section>
-			<section class="benefit">
+			<section>
 				<h2>Responsive</h2>
-				<p>For each screen you want to support, you can indicate how elements will adapt. An initial set of breakpoints are defined (<code>@palm</code>, <code>@lap</code>,<code>@portable</code>, and <code>@desk</code>) but you can define as many screen sizes as you need.</p>
+				<p>Set a different percentage for each screen you want to support, and the layoutt will change accordingly. The initial set of breakpoints (<code>@palm</code>, <code>@lap</code>, <code>@portable</code>, and <code>@desk</code>) can be easilly extended.</p>
 				<!--<a href="exampes/responsive.html">More</a> -->
 			</section>
-			<section class="benefit">
+			<section>
 				<h2>Semantic</h2>
-				<p>It's based on LESS to keep the HTML free from grid classes, and allowing you to adjust any property beyond layout when being responsive.</p>
+				<p>It's based on LESS to keep the HTML free from grid classes. You can adjust any property beyond layout (font-size, images, etc.) when being responsive for each sceen size.</p>
 				<!-- <a href="exampes/semantic.html">More</a> -->
 			</section>
 
 <div class="example">
-<p>For example, if you want some sections to occupy &#x2153; by default, but to expand to the whole width on a mobile device, you need the following LESS code:</p>
+<p>For example, the following LESS code makes sections to occupy &#x2153; by default, but to expand to the whole width on a mobile device using also a bigger font:</p>
 <code class="block">section {
-    .mw-ui-item;
     .mw-ui-one-third;
     @media @palm {
         .mw-ui-one-whole;
@@ -38,11 +37,19 @@
 	}
 }</code>
 </div>
+<div class="more">
+	<h2>Download</h2>
+	<p>You can check <a href="https://github.com/pauginer/agora-grid">the project at Github</a> or <a href="https://github.com/pauginer/agora-grid/archive/master.zip">download it</a>.
+	</p>
 
-<div class="extensions">
-Extensions of the grid system allow it to add explicit media proportions or use the flexbox model.
+<h2>Documentation</h2>
+<p>More exampes and detailed documentation will be added in the future. Meanwhile, some relevant files to take a look at:</p>
+	<ul>
+		<li><a href="https://github.com/pauginer/agora-grid/blob/master/src/grid-variables.less">grid-variables</a> defines the breakpoints and the default gutter for the grid.</li>
+		<li><a href="https://github.com/pauginer/agora-grid/blob/master/src/grid-core.less">grid-core</a> defines the proportion mixins.</li>
+		<li><a href="https://github.com/pauginer/agora-grid/blob/master/index-style.less">Example LESS code</a> used in the current page (<a href="https://github.com/pauginer/agora-grid/blob/master/index.html">view source</a>).</li>
+	</ul>
 </div>
-
 </div>
 	</body>
 </html>
