@@ -60,15 +60,12 @@ section {
 	padding: 10px;
 	p {
 		.mw-ui-two-thirds;
-		@media @portable {
-			.mw-ui-one-whole;
-		}
+		.mw-ui-one-whole(@portable);
+
 	}
 	code {
 		.mw-ui-one-third;
-		@media @portable {
-			.mw-ui-one-whole;
-		}
+		.mw-ui-one-whole(@portable);
 	}
 }
 
