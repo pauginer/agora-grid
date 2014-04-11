@@ -41,7 +41,7 @@ section {
   box-sizing: border-box;
   width: 33.333%;
 }
-section.right {
+section.mw-ui-right {
   float: right;
 }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
@@ -56,7 +56,7 @@ section.right {
     width: 50%;
     font-size: 1.4em;
   }
-  section.right {
+  section.mw-ui-right {
     float: right;
   }
   section:last-of-type {
@@ -68,7 +68,7 @@ section.right {
     box-sizing: border-box;
     width: 100%;
   }
-  section:last-of-type.right {
+  section:last-of-type.mw-ui-right {
     float: right;
   }
 }
@@ -85,7 +85,7 @@ section.right {
     padding-left: 0;
     padding-right: 0;
   }
-  section.right {
+  section.mw-ui-right {
     float: right;
   }
 }
@@ -103,12 +103,12 @@ section.right {
   width: 100%;
   background: #fcfcfc;
   border: 1px solid #ddd;
-  margin: 4em 0;
+  margin: 3em 0 0 0;
   box-shadow: 0 2px 0px #ccc;
   border-radius: 3px;
   padding: 10px;
 }
-.example.right {
+.example.mw-ui-right {
   float: right;
 }
 .example p {
@@ -121,7 +121,7 @@ section.right {
   box-sizing: border-box;
   width: 66.666%;
 }
-.example p.right {
+.example p.mw-ui-right {
   float: right;
 }
 @media only screen and (max-width: 1023px) {
@@ -134,11 +134,11 @@ section.right {
     box-sizing: border-box;
     width: 100%;
   }
-  .example p.right {
+  .example p.mw-ui-right {
     float: right;
   }
 }
-.example code {
+.example .block {
   float: left;
   padding-left: 5px;
   padding-right: 5px;
@@ -148,11 +148,11 @@ section.right {
   box-sizing: border-box;
   width: 33.333%;
 }
-.example code.right {
+.example .block.mw-ui-right {
   float: right;
 }
-@media only screen and (max-width: 1023px) {
-  .example code {
+@media only screen and (max-width: 480px) {
+  .example .block {
     float: left;
     padding-left: 5px;
     padding-right: 5px;
@@ -161,7 +161,21 @@ section.right {
     box-sizing: border-box;
     width: 100%;
   }
-  .example code.right {
+  .example .block.mw-ui-right {
+    float: right;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .example .block {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .example .block.mw-ui-right {
     float: right;
   }
 }
@@ -174,8 +188,38 @@ section.right {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.more.right {
+.more.mw-ui-right {
   float: right;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .palm-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .palm-only {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .lap-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .lap-only {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .desk-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .desk-only {
+    display: none;
+  }
 }
 h2 {
   margin-top: 30px;

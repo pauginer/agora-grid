@@ -54,7 +54,7 @@ section {
 	.mw-ui-one-whole;
 	background: #fcfcfc;
 	border: 1px solid #ddd;
-	margin: 4em 0;
+	margin: 3em 0 0 0;
 	box-shadow: 0 2px 0px #ccc;
 	border-radius: 3px;
 	padding: 10px;
@@ -63,14 +63,26 @@ section {
 		.mw-ui-one-whole(@portable);
 
 	}
-	code {
+	.block {
 		.mw-ui-one-third;
-		.mw-ui-one-whole(@portable);
+		.mw-ui-one-whole(@palm, @lap);
 	}
 }
 
 .more {
 	.mw-ui-item;
+}
+
+//Visibility examples:
+.palm-only {
+	.mw-ui-hidden(@lap,@desk);
+}
+
+.lap-only {
+	.mw-ui-hidden(@palm,@desk);
+}
+.desk-only {
+	.mw-ui-hidden(@palm,@lap);
 }
 
 

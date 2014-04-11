@@ -13,12 +13,12 @@
 			<p class="lead">Write less to support all screens </p>
 			<section class="benefit">
 				<h2>Proportional</h2>
-				<p>Indicate which percentage of the available screen should occupy each element using LESS mixins such as <code>.mw-ui-one-half</code> or <code>mw-ui-two-thirds</code>.</p>
+				<p>Indicate which percentage of the available screen should occupy each element using LESS mixins such as <code>.mw-ui-one-half</code> or <code>.mw-ui-two-thirds</code>.</p>
 				<!-- <a href="exampes/proportional.html">More</a> -->
 			</section>
 			<section>
 				<h2>Responsive</h2>
-				<p>Set a different percentage for each screen you want to support, and the layoutt will change accordingly. The initial set of breakpoints (<code>@palm</code>, <code>@lap</code>, <code>@portable</code>, and <code>@desk</code>) can be easilly extended. The <code>.mw-ui-one-third(@palm)</code> mixin will make an element occupy 1/3 on a small mobile device.</p>
+				<p>Set a different percentage for each screen you want to support. The <code>.mw-ui-one-third(@palm)</code> mixin  makes an element occupy &#8531; on a small mobile device.  The <code>.mw-ui-one-third(@palm,@desk)</code> will do the same but applied for both <code>palm</code> and <code>desk</code> sizes. The initial breakpoints (<code>@palm</code>, <code>@lap</code>, <code>@portable</code>, and <code>@desk</code>) can be easilly extended. </p>
 				<!--<a href="exampes/responsive.html">More</a> -->
 			</section>
 			<section>
@@ -36,6 +36,10 @@
         font-size: 2.2em;
     }
 }</code>
+</div>
+
+<div class="example">
+<p>Responsive visibility mixins such as <code>.mw-ui-hidden(@palm,@desk)</code> are also included to show/hide elements on certain screen sizes:</p> <p class="block"><strong>You are on a <span class="palm-only">palm-sized</span><span class="lap-only">lap-sized</span><span class="desk-only">desk-sized</span> device.</strong></p>
 </div>
 <div class="more">
 	<h2>Download</h2>

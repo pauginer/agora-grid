@@ -3,225 +3,269 @@
 
 
 //Proportions
-.mw-ui-one-whole(@medium){
+.mw-ui-one-whole(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-whole;
 	}
+	.mw-ui-one-whole(@rest);
 }
-.mw-ui-one-half(@medium){
+.mw-ui-one-half(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-half;
 	}
+	.mw-ui-one-half(@rest);
 }
-.mw-ui-one-third(@medium){
+.mw-ui-one-third(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-third;
 	}
+	.mw-ui-one-third(@rest);
 }
-.mw-ui-two-thirds(@medium){
+.mw-ui-two-thirds(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-thirds;
 	}
+	.mw-ui-two-thirds(@rest);
 }
-.mw-ui-one-quarter(@medium){
+.mw-ui-one-quarter(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-quarter;
 	}
+	.mw-ui-one-quarter(@rest);
 }
-.mw-ui-two-quarters(@medium){
+.mw-ui-two-quarters(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-quarters;
 	}
+	.mw-ui-two-quarters(@rest);
 }
-.mw-ui-three-quarters(@medium){
+.mw-ui-three-quarters(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-three-quarters;
 	}
+	.mw-ui-three-quarters(@rest)
 }
-.mw-ui-one-fifth(@medium){
+.mw-ui-one-fifth(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-fifth;
 	}
+	.mw-ui-one-fifth(@rest);
 }
-.mw-ui-two-fifths(@medium){
+.mw-ui-two-fifths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-fifths;
 	}
+	.mw-ui-two-fifths(@rest);
 }
-.mw-ui-three-fifths(@medium){
+.mw-ui-three-fifths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-three-fifths;
 	}
+	.mw-ui-three-fifths(@rest);
 }
-.mw-ui-four-fifths(@medium){
+.mw-ui-four-fifths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-four-fifths;
 	}
+	.mw-ui-four-fifths(@rest);
 }
-.mw-ui-one-sixth(@medium){
+.mw-ui-one-sixth(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-sixth;
 	}
+	.mw-ui-one-sixth(@rest);
 }
-.mw-ui-two-sixths(@medium){
+.mw-ui-two-sixths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-sixths;
 	}
+	.mw-ui-two-sixths(@rest);
 }
-.mw-ui-three-sixths(@medium){
+.mw-ui-three-sixths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-three-sixths;
 	}
+	.mw-ui-three-sixths(@rest);
 }
-.mw-ui-four-sixths(@medium){
+.mw-ui-four-sixths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-four-sixths;
 	}
+	.mw-ui-four-sixths(@rest);
 }
-.mw-ui-five-sixths(@medium){
+.mw-ui-five-sixths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-five-sixths;
 	}
+	.mw-ui-five-sixths(@rest)
 }
-.mw-ui-one-eighth(@medium){
+.mw-ui-one-eighth(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-eighth;
 	}
+	.mw-ui-one-eighth(@rest)
 }
-.mw-ui-two-eighths(@medium){
+.mw-ui-two-eighths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-eighths;
 	}
+	.mw-ui-two-eighths(@rest)
 }
-.mw-ui-three-eighths(@medium){
+.mw-ui-three-eighths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-three-eighths;
 	}
+	.mw-ui-three-eighths(@rest);
 }
-.mw-ui-four-eighths(@medium){
+.mw-ui-four-eighths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-four-eighths;
 	}
+	.mw-ui-four-eighths(@rest);
 }
-.mw-ui-five-eighths(@medium){
+.mw-ui-five-eighths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-five-eighths;
 	}
+	.mw-ui-five-eighths(@rest);
 }
-.mw-ui-six-eighths(@medium){
+.mw-ui-six-eighths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-six-eighths;
 	}
+	.mw-ui-six-eighths(@rest);
 }
-.mw-ui-seven-eighths(@medium){
+.mw-ui-seven-eighths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-seven-eighths;
 	}
+	.mw-ui-seven-eighths(@rest);
 }
-.mw-ui-one-tenth(@medium){
+.mw-ui-one-tenth(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-tenth;
 	}
+	.mw-ui-one-tenth(@rest);
 }
-.mw-ui-two-tenths(@medium){
+.mw-ui-two-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-tenths;
 	}
+	.mw-ui-two-tenths(@rest);
 }
-.mw-ui-three-tenths(@medium){
+.mw-ui-three-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-three-tenths;
 	}
+	.mw-ui-three-tenths(@rest);
 }
-.mw-ui-four-tenths(@medium){
+.mw-ui-four-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-four-tenths;
 	}
+	.mw-ui-four-tenths(@rest);
 }
-.mw-ui-five-tenths(@medium){
+.mw-ui-five-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-five-tenths;
 	}
+	.mw-ui-five-tenths(@rest);
 }
-.mw-ui-six-tenths(@medium){
+.mw-ui-six-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-six-tenths;
 	}
+	.mw-ui-six-tenths(@rest);
 }
-.mw-ui-seven-tenths(@medium){
+.mw-ui-seven-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-seven-tenths;
 	}
+	.mw-ui-seven-tenths(@rest);
 }
-.mw-ui-eight-tenths(@medium){
+.mw-ui-eight-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-eight-tenths;
 	}
+	.mw-ui-eight-tenths(@rest);
 }
-.mw-ui-nine-tenths(@medium){
+.mw-ui-nine-tenths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-nine-tenths;
 	}
+	.mw-ui-nine-tenths(@rest);
 }
-.mw-ui-one-twelfth(@medium){
+.mw-ui-one-twelfth(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-one-twelfth;
 	}
+	.mw-ui-one-twelfth(@rest);
 }
-.mw-ui-two-twelfths(@medium){
+.mw-ui-two-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-two-twelfths;
 	}
+	.mw-ui-two-twelfths(@rest);
 }
-.mw-ui-three-twelfths(@medium){
+.mw-ui-three-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-three-twelfths;
 	}
+	.mw-ui-three-twelfths(@rest);
 }
-.mw-ui-four-twelfths(@medium){
+.mw-ui-four-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-four-twelfths;
 	}
+	.mw-ui-four-twelfths(@rest);
 }
-.mw-ui-five-twelfths(@medium){
+.mw-ui-five-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-five-twelfths;
 	}
+	.mw-ui-five-twelfths(@rest);
 }
-.mw-ui-six-twelfths(@medium){
+.mw-ui-six-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-six-twelfths;
 	}
+	.mw-ui-six-twelfths(@rest);
 }
-.mw-ui-seven-twelfths(@medium){
+.mw-ui-seven-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-seven-twelfths;
 	}
+	.mw-ui-seven-twelfths(@rest);
 }
-.mw-ui-eight-twelfths(@medium){
+.mw-ui-eight-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-eight-twelfths;
 	}
+	.mw-ui-eight-twelfths(@rest);
 }
-.mw-ui-nine-twelfths(@medium){
+.mw-ui-nine-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-nine-twelfths;
 	}
+	.mw-ui-nine-twelfths(@rest);
 }
-.mw-ui-ten-twelfths(@medium){
+.mw-ui-ten-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-ten-twelfths;
 	}
+	.mw-ui-ten-twelfths(@rest);
 }
-.mw-ui-eleven-twelfths(@medium){
+.mw-ui-eleven-twelfths(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-eleven-twelfths;
 	}
+	.mw-ui-eleven-twelfths(@rest);
 }
 
 //Visibility
-.mw-ui-hidden(@medium){
+.mw-ui-hidden(@medium; @rest...) when (length(@medium)=1){
 	@media @medium {
 		.mw-ui-hidden;
 	}
+	.mw-ui-hidden(@rest);
 }
