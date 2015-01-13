@@ -9,7 +9,7 @@ It provides a set of classes that allow to adapt your layouts to different scree
 Use with LESS
 -------------
 
-If you are using Less for your styling, you can use the grid system without addign the grid clases directly to the HTML.
+If you are using Less for your styling, you can use the grid system without adding the grid clases directly to the HTML.
 
 More information
 ----------------
