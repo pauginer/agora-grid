@@ -1,0 +1,23 @@
+{
+  "name": "agora-grid",
+  "version": "0.1.0",
+  "homepage": "http://pauginer.github.io/agora-grid/",
+  "ignore": [
+    "examples/",
+    "index-style.css",
+    "index-style.less",
+    "index.html",
+    "puzzle.png",
+    "puzzle.svg"
+  ],
+  "authors": [
+    "Pau Giner"
+  ],
+  "description": "Experimental proportional grid for Agora",
+  "main": "src/grid.less",
+  "keywords": [
+    "grid",
+    "css"
+  ],
+  "license": "MIT"
+}
